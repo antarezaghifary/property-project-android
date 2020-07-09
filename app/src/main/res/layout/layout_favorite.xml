@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content"
+    tools:ignore="RtlHardcoded">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/imageViewFav"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:contentDescription="Gambar 2"
+        android:src="@drawable/hotel_one"
+        tools:ignore="HardcodedText,RtlHardcoded,UnknownIdInLayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageViewFav"
+        android:layout_alignStart="@+id/imageViewFav"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/imageViewFav"
+        tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/textViewFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="3 Program Studi"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:maxLines="2"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView2Fav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50 Mata Kuliah"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+</RelativeLayout>

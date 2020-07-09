@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F1F3F9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_dash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F3F9"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,UselessLeaf">
+
+            <ImageView
+                android:id="@+id/lokasi"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/user_empty"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/lokasi"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/textLokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="lorem ipsum dolor"
+                    android:textFontWeight="1"
+                    tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded"
+                    tools:targetApi="p" />
+
+                <TextView
+                    android:id="@+id/EditLokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textLokasi"
+                    android:layout_alignEnd="@+id/textLokasi"
+                    android:layout_marginLeft="20dp"
+                    android:text="lorem ipsum dolor"
+                    android:textFontWeight="1"
+                    tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded"
+                    tools:targetApi="p" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/user_empty"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="#FFF"
+            app:layout_constraintBottom_toTopOf="@+id/textFind"
+            app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            tools:ignore="MissingConstraints">
+
+            <com.arlib.floatingsearchview.FloatingSearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:floatingSearch_leftActionMode="showHamburger"
+                app:floatingSearch_searchHint="Search..."
+                app:floatingSearch_showSearchKey="false"
+                app:floatingSearch_suggestionsListAnimDuration="250"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textFind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/rvProperties"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textFindtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="Find Your Perfect \nProperties"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rvProperties"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFind"
+            tools:ignore="UselessLeaf">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChoose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:id="@+id/Lates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvChoose"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="Latest"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/getAllLatest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="View all"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Lates"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:paddingLeft="8dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <RelativeLayout
+                android:id="@+id/Favorito"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rvLates"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:text="Favorite"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    tools:ignore="HardcodedText,RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFavotiro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Favorito"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="false"
+                android:paddingLeft="8dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

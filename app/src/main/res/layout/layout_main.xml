@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/hari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:text="Thuesday, 25 Desember 2020"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_below="@+id/hari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+</RelativeLayout>

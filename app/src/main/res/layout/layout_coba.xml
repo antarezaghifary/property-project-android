@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/hotel_one"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#F1F3F6">
+
+                <include
+                    android:id="@+id/news_title"
+                    layout="@layout/layout_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButtonR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/floatingActionButtonR"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    tools:ignore="RtlHardcoded,UselessLeaf">
+
+                    <TextView
+                        android:id="@+id/tvNameHotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hotel California"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvAlamat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvNameHotel"
+                        android:paddingTop="5dp"
+                        android:text="Dsn. Glodogan, RT/RW 04/02"
+                        tools:ignore="HardcodedText,UnknownId" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButtonF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
