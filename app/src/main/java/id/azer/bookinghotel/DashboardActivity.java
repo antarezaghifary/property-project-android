@@ -74,7 +74,7 @@ public class DashboardActivity extends AppCompatActivity implements MenuAdapter.
         rvLates.setHasFixedSize(true);
         latestModels.addAll(LatestData.getListData());
         rvLates.setLayoutManager((new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, true)));
-        latestAdapter = new LatestAdapter(latestModels, this);
+        latestAdapter = new LatestAdapter(latestModels, this, this);
         rvLates.setAdapter(latestAdapter);
         ViewCompat.setNestedScrollingEnabled(rvLates, false);
 
@@ -102,7 +102,7 @@ public class DashboardActivity extends AppCompatActivity implements MenuAdapter.
         rvFovorite.setHasFixedSize(true);
         favoriteModels.addAll(FavoriteData.getListData());
         rvFovorite.setLayoutManager(new GridLayoutManager(this, 1));
-        favoriteAdapter = new FavoriteAdapter(favoriteModels, this);
+        favoriteAdapter = new FavoriteAdapter(favoriteModels, this, this);
         rvFovorite.setAdapter(favoriteAdapter);
         ViewCompat.setNestedScrollingEnabled(rvFovorite, false);
     }

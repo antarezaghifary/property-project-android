@@ -1,5 +1,6 @@
 package id.azer.bookinghotel.Adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,8 +33,15 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuGrid> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuGrid holder, int position) {
+    public void onBindViewHolder(@NonNull MenuGrid holder, final int position) {
         holder.sefDataMenu(menuModels.get(position));
+        holder.ivPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("ini ","posisi " + position);
+
+            }
+        });
     }
 
     @Override
