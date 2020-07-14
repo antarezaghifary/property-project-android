@@ -45,11 +45,10 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MenuGr
                 Log.d("ini","posisi : "+position);
                 Fragment newFragment = new DetailAllItemFavoriteFragment();
                 FragmentTransaction transaction = ((AppCompatActivity) context).getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.layout_dash, newFragment);
+                transaction.replace(R.id.frame_clear, newFragment, null).commit();
                 Bundle bundle = new Bundle();
                 newFragment.setArguments(bundle);
                 transaction.addToBackStack(null);
-                transaction.commit();
             }
         });
     }

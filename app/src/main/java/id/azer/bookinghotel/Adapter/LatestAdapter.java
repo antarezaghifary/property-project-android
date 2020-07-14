@@ -14,8 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-
-import id.azer.bookinghotel.DetailAllItemFavoriteFragment;
 import id.azer.bookinghotel.DetailAllItemLatesFragment;
 import id.azer.bookinghotel.Model.LatestModel;
 import id.azer.bookinghotel.R;
@@ -47,11 +45,10 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.MenuGrid> 
                 Log.d("ini ","posisi : "+position);
                 Fragment newFragment = new DetailAllItemLatesFragment();
                 FragmentTransaction transaction = ((AppCompatActivity) context).getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.layout_dash, newFragment);
+                transaction.replace(R.id.frame_clear, newFragment,null).commit();
                 Bundle bundle = new Bundle();
                 newFragment.setArguments(bundle);
                 transaction.addToBackStack(null);
-                transaction.commit();
             }
         });
     }
