@@ -18,8 +18,6 @@ public class DetailAllItemLatesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_detail_all_item_lates, container, false);;
-
-
         return view;
     }
 }

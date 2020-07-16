@@ -1,7 +1,7 @@
 package id.azer.bookinghotel.Adapter;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,12 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import id.azer.bookinghotel.DetailAllItemFavoriteFragment;
+import id.azer.bookinghotel.MainActivity;
 import id.azer.bookinghotel.Model.FavoriteModel;
 import id.azer.bookinghotel.R;
 
@@ -38,17 +35,17 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MenuGr
 
     @Override
     public void onBindViewHolder(@NonNull FavoriteAdapter.MenuGrid holder, final int position) {
+        final FavoriteModel model = favoriteModels.get(position);
         holder.sefDataMenu(favoriteModels.get(position));
         holder.ivPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("ini","posisi : "+position);
-                Fragment newFragment = new DetailAllItemFavoriteFragment();
-                FragmentTransaction transaction = ((AppCompatActivity) context).getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frame_clear, newFragment, null).commit();
-                Bundle bundle = new Bundle();
-                newFragment.setArguments(bundle);
-                transaction.addToBackStack(null);
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra("tvTitle",model.getName());
+                intent.putExtra("tvTitle2",model.getNama2());
+                intent.putExtra("ivPhoto",model.getImage());
+                context.startActivity(intent);
             }
         });
     }

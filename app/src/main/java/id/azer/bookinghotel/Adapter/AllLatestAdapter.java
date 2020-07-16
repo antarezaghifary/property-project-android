@@ -1,16 +1,17 @@
 package id.azer.bookinghotel.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
+import id.azer.bookinghotel.MainActivity;
 import id.azer.bookinghotel.Model.LatestModel;
 import id.azer.bookinghotel.R;
 
@@ -31,11 +32,19 @@ public class AllLatestAdapter extends RecyclerView.Adapter<AllLatestAdapter.Menu
 
     @Override
     public void onBindViewHolder(@NonNull AllLatestAdapter.MenuGrid holder, final int position) {
+        final LatestModel model = latestModels.get(position);
         holder.sefDataMenu(latestModels.get(position));
         holder.ivPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("ini","posisi : "+position);
+                //Toast.makeText(onClickListener,"Coming Soon Index "+position,Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(onClickListener, MainActivity.class);
+                intent.putExtra("tvTitle",model.getName());
+                intent.putExtra("tvTitle2",model.getNama2());
+                intent.putExtra("ivPhoto",model.getImage());
+                onClickListener.startActivity(intent);
+
             }
         });
     }

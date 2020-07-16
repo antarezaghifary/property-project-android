@@ -1,96 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
 
-        <ImageView
+<!--        <ImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:srcCompat="@drawable/hotel_one"-->
+<!--            tools:ignore="ContentDescription" />-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:background="#F1F3F6"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <include-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:id="@+id/news_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                layout="@layout/layout_main"/>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        app:cardCornerRadius="40dp"-->
+<!--        android:layout_height="80dp" >-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="10dp">-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/floatingActionButtonR"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                tools:srcCompat="@tools:sample/avatars"-->
+<!--                tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_toRightOf="@+id/floatingActionButtonR"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:padding="5dp"-->
+<!--                tools:ignore="RtlHardcoded,UselessLeaf">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvNameHotel"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Hotel California"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="#000"-->
+<!--                    tools:ignore="HardcodedText" />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvAlamat"-->
+<!--                    android:layout_below="@+id/tvNameHotel"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:text="Dsn. Glodogan, RT/RW 04/02"-->
+<!--                    tools:ignore="HardcodedText,UnknownId" />-->
+
+<!--            </RelativeLayout>-->
+
+<!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--                android:id="@+id/floatingActionButtonF"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                tools:srcCompat="@tools:sample/avatars"-->
+<!--                tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/hotel_one"
-            tools:ignore="ContentDescription" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="#F1F3F6"
-            android:layout_weight="1">
-
-            <include
-                android:layout_marginTop="40dp"
-                android:id="@+id/news_title"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                layout="@layout/layout_main"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_centerInParent="true"
-        app:cardCornerRadius="40dp"
-        android:layout_height="80dp" >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButtonR"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:layout_alignParentLeft="true"
-                tools:srcCompat="@tools:sample/avatars"
-                tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded" />
-
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@+id/floatingActionButtonR"
-                android:gravity="center_vertical"
-                android:padding="5dp"
-                tools:ignore="RtlHardcoded,UselessLeaf">
-                <TextView
-                    android:id="@+id/tvNameHotel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hotel California"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#000"
-                    tools:ignore="HardcodedText" />
-                <TextView
-                    android:id="@+id/tvAlamat"
-                    android:layout_below="@+id/tvNameHotel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
-                    android:text="Dsn. Glodogan, RT/RW 04/02"
-                    tools:ignore="HardcodedText,UnknownId" />
-
-            </RelativeLayout>
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floatingActionButtonF"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:layout_alignParentRight="true"
-                tools:srcCompat="@tools:sample/avatars"
-                tools:ignore="KeyboardInaccessibleWidget,RelativeOverlap,RtlHardcoded" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+                android:padding="8dp"
+                android:id="@+id/relativee">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:padding="4dp"
+                    android:id="@+id/images"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc"
+                    android:layout_toRightOf="@+id/images"
+                    android:layout_marginLeft="5dp"
+                    android:text="nonaaaa"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc2"
+                    android:layout_below="@+id/desc"
+                    android:layout_toRightOf="@+id/images"
+                    android:layout_marginLeft="5dp"
+                    android:text="nonaaaa"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+</LinearLayout>

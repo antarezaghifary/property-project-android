@@ -1,5 +1,6 @@
 package id.azer.bookinghotel;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,8 +23,9 @@ public class DetailAllItemFavoriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = (ViewGroup)inflater.inflate(R.layout.fragment_detai_alll_item_favorite, container, false);
+        view.setBackgroundColor(Color.WHITE);
 
-        setFullScreen();
+        //setFullScreen();
         return view;
     }
 

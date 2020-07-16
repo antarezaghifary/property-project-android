@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -54,6 +55,23 @@ public class DashboardActivity extends AppCompatActivity implements MenuAdapter.
 
     @Override
     public void onMenuClickListener(int position) {
+        switch(position) {
+            case 0:
+                Toast.makeText(this, "Menu House Coming Soon", Toast.LENGTH_LONG).show();
+                break;
+            case 1:
+                Toast.makeText(this, "Menu Apartement Coming Soon", Toast.LENGTH_LONG).show();
+                break;
+            case 2:
+                Toast.makeText(this, "Menu Villa Coming Soon", Toast.LENGTH_LONG).show();
+                break;
+            case 3:
+                Toast.makeText(this, "Menu Other Coming Soon", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                Toast.makeText(this, "Menu Coming Soon", Toast.LENGTH_LONG).show();
+                break;
+        }
 
     }
 
