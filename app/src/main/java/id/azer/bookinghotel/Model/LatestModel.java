@@ -3,6 +3,7 @@ package id.azer.bookinghotel.Model;
 public class LatestModel {
     private String name;
     private String nama2;
+    private String nama3;
     private int image;
     private int color;
 
@@ -22,6 +23,14 @@ public class LatestModel {
 
     public void setNama2(String name2) {
         this.nama2 = name2;
+    }
+
+    public String getNama3() {
+        return nama3;
+    }
+
+    public void setNama3(String name3) {
+        this.nama3 = name3;
     }
 
     public int getImage() { return image; }

@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FFFFFF"
     android:layout_width="match_parent"
-    android:padding="10dp"
     android:layout_marginBottom="8dp"
     android:layout_height="wrap_content"
     tools:ignore="RtlHardcoded">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:id="@+id/relativee">
 
     <ImageView
         android:scaleType="centerCrop"
@@ -25,7 +35,7 @@
         android:layout_alignStart="@+id/imageViewFav"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/imageViewFav"
-        tools:ignore="RtlHardcoded">
+        tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
 
         <TextView
             android:id="@+id/textViewFav"
@@ -45,4 +55,6 @@
             android:text="50 Mata Kuliah"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
-</RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

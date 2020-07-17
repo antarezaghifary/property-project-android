@@ -45,8 +45,9 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.MenuGrid> 
                 intent.putExtra("tvTitle",model.getName());
                 intent.putExtra("tvTitle2",model.getNama2());
                 intent.putExtra("ivPhoto",model.getImage());
+                //intent.putExtra("textView3",model.getNama3());
+                intent.putExtra("detail", model.getNama3());
                 context.startActivity(intent);
-
 
             }
         });
@@ -67,6 +68,7 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.MenuGrid> 
             tvTitle = itemView.findViewById(R.id.textView);
             tvTitle2 = itemView.findViewById(R.id.textView2);
             ivPhoto = itemView.findViewById(R.id.imageView);
+            //textView3 = itemView.findViewById(R.id.detail);
             this.onClickListener = onClickListener;
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -79,6 +81,7 @@ public class LatestAdapter extends RecyclerView.Adapter<LatestAdapter.MenuGrid> 
         void sefDataMenu(LatestModel latestModel){
             tvTitle.setText(latestModel.getName());
             tvTitle2.setText(latestModel.getNama2());
+            //textView3.setText(latestModel.getNama3());
             ivPhoto.setImageResource(latestModel.getImage());
             ivPhoto.setBackgroundResource(latestModel.getColor());
         }

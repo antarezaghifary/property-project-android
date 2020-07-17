@@ -29,6 +29,17 @@ public class LatestData {
             "5 kamar \n3 kamar mandi",
     };
 
+    private static String[] MENU3 = {
+            "5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi","5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi","5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi","5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi","5a kamar \n3b kamar mandi",
+            "5a kamar \n3b kamar mandi",
+    };
+
     private static int[] IMAGE = {
             R.drawable.hotel_one,
             R.drawable.hotel_one,
@@ -47,6 +58,7 @@ public class LatestData {
             model.setImage(IMAGE[position]);
             model.setName(MENU[position]);
             model.setNama2(MENU2[position]);
+            model.setNama3(MENU3[position]);
             list.add(model);
         }
         return list;
@@ -58,6 +70,7 @@ public class LatestData {
             model.setImage(IMAGE[position]);
             model.setName(MENU[position]);
             model.setNama2(MENU2[position]);
+            model.setNama3(MENU3[position]);
             list.add(model);
         }
         return list;

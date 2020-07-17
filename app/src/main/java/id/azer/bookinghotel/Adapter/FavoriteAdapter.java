@@ -45,6 +45,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MenuGr
                 intent.putExtra("tvTitle",model.getName());
                 intent.putExtra("tvTitle2",model.getNama2());
                 intent.putExtra("ivPhoto",model.getImage());
+                intent.putExtra("detail", model.getNama3());
                 context.startActivity(intent);
             }
         });

@@ -43,6 +43,7 @@ public class AllLatestAdapter extends RecyclerView.Adapter<AllLatestAdapter.Menu
                 intent.putExtra("tvTitle",model.getName());
                 intent.putExtra("tvTitle2",model.getNama2());
                 intent.putExtra("ivPhoto",model.getImage());
+                intent.putExtra("detail", model.getNama3());
                 onClickListener.startActivity(intent);
 
             }
