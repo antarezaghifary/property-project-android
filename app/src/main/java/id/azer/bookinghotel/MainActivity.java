@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         textView2 = findViewById(R.id.desc2);
         textView3 = findViewById(R.id.detail);
 
+        //ana
         text = getIntent().getStringExtra("tvTitle");
         text2 = getIntent().getStringExtra("tvTitle2");
         image = getIntent().getIntExtra("ivPhoto",0);
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             text3 = Objects.requireNonNull(getIntent().getExtras()).getString("detail");
             textView3.setText(text3);
         }
-        
+
         textView.setText(text);
         textView2.setText(text2);
         textView3.setText("Detail "+text3);
