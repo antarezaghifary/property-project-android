@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -49,6 +50,18 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MenuGr
                 context.startActivity(intent);
             }
         });
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("ini","posisi : "+position);
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra("tvTitle",model.getName());
+                intent.putExtra("tvTitle2",model.getNama2());
+                intent.putExtra("ivPhoto",model.getImage());
+                intent.putExtra("detail", model.getNama3());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -60,12 +73,14 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MenuGr
         private TextView tvTitle,tvTitle2;
         private ImageView ivPhoto;
         private FavoriteAdapter.OnClickListener onClickListener;
+        private LinearLayout linearLayout;
 
         MenuGrid(@NonNull View itemView, FavoriteAdapter.OnClickListener onClickListener) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.textViewFav);
             tvTitle2 = itemView.findViewById(R.id.textView2Fav);
             ivPhoto = itemView.findViewById(R.id.imageViewFav);
+            linearLayout = itemView.findViewById(R.id.linearFav);
             this.onClickListener = onClickListener;
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
