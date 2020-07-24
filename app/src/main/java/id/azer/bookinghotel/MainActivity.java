@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView.setText(text);
         textView2.setText(text2);
-        textView3.setText("Detail "+text3);
+        textView3.setText("Detail \n"+text3);
         imageView.setImageResource(image);
 
 
